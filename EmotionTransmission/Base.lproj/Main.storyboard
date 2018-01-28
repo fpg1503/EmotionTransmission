@@ -46,7 +46,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="Try Again"/>
                                 <connections>
-                                    <action selector="openCameraButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CRv-OG-cQ6"/>
                                     <action selector="tryAgainWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xyN-EN-Aa3"/>
                                 </connections>
                             </button>
