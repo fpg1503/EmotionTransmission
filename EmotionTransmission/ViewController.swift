@@ -1,25 +1,14 @@
-//
-//  ViewController.swift
-//  EmotionTransmission
-//
-//  Created by Francesco Perrotti-Garcia on 28/01/18.
-//  Copyright © 2018 Francesco Perrotti-Garcia. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let image = UIImage(named: "test")!
+        Requester().classify(image: image) { (val, err) in
+            print(val)
+            print(err)
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 
 }
-
