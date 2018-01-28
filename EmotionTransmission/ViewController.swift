@@ -45,10 +45,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         status.text = "Processing..."
         Requester().classify(image: image) { (response, error) in
             let strongest = response!.strongestEmotion()
-            if strongest == self.currentEmotion {
-                self.status.text = "Good job!"
-            } else {
-                self.status.text = "You got " + strongest.rawValue
+            DispatchQueue.main.async {
+                if strongest == self.currentEmotion {
+                    self.status.text = "Good job!"
+                } else {
+                    self.status.text = "You got " + strongest.rawValue
+                }
             }
         }
         dismiss(animated:true, completion: nil)
