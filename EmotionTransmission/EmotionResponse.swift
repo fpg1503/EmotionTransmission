@@ -1,25 +1,27 @@
 struct EmotionResponse {
-    let anger: Float
-    let contempt: Float
-    let disgust: Float
-    let fear: Float
-    let neutral: Float
-    let sadness: Float
-    let surprise: Float
+    let anger: Double
+    let contempt: Double
+    let disgust: Double
+    let fear: Double
+    let happiness: Double
+    let neutral: Double
+    let sadness: Double
+    let surprise: Double
 
     func strongestEmotion() -> Emotion {
-        let emotions: [Emotion: Float] = [
+        let emotions: [Emotion: Double] = [
             .anger: anger,
             .contempt: contempt,
             .disgust: disgust,
             .fear: fear,
+            .happiness: happiness,
             .neutral: neutral,
             .sadness: sadness,
             .surprise: surprise
         ]
 
         let sorted = emotions.sorted { lhs, rhs -> Bool in
-            lhs.value < rhs.value
+            lhs.value > rhs.value
         }
 
         print(sorted)

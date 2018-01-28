@@ -6,7 +6,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let image = UIImage(named: "test")!
         Requester().classify(image: image) { (val, err) in
-            print(val)
+            dump(val)
+            print(val?.strongestEmotion())
             print(err)
         }
     }
