@@ -14,6 +14,8 @@
 		A3B24CAA201E476900CEE30B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3B24CA8201E476900CEE30B /* LaunchScreen.storyboard */; };
 		A3E52441201E4862008F81A2 /* Requester.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E52440201E4862008F81A2 /* Requester.swift */; };
 		A3E52443201E4895008F81A2 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E52442201E4895008F81A2 /* Key.swift */; };
+		A3E52445201E4AC3008F81A2 /* EmotionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E52444201E4AC3008F81A2 /* EmotionResponse.swift */; };
+		A3E52447201E4B12008F81A2 /* Emotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E52446201E4B12008F81A2 /* Emotion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		A3B24CAB201E476900CEE30B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3E52440201E4862008F81A2 /* Requester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requester.swift; sourceTree = "<group>"; };
 		A3E52442201E4895008F81A2 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		A3E52444201E4AC3008F81A2 /* EmotionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionResponse.swift; sourceTree = "<group>"; };
+		A3E52446201E4B12008F81A2 /* Emotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emotion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				A3B24C9F201E476900CEE30B /* AppDelegate.swift */,
 				A3B24CA1201E476900CEE30B /* ViewController.swift */,
 				A3E52440201E4862008F81A2 /* Requester.swift */,
+				A3E52444201E4AC3008F81A2 /* EmotionResponse.swift */,
+				A3E52446201E4B12008F81A2 /* Emotion.swift */,
 				A3E52442201E4895008F81A2 /* Key.swift */,
 				A3B24CA3201E476900CEE30B /* Main.storyboard */,
 				A3B24CA6201E476900CEE30B /* Assets.xcassets */,
@@ -142,10 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3E52445201E4AC3008F81A2 /* EmotionResponse.swift in Sources */,
 				A3B24CA2201E476900CEE30B /* ViewController.swift in Sources */,
 				A3E52443201E4895008F81A2 /* Key.swift in Sources */,
 				A3B24CA0201E476900CEE30B /* AppDelegate.swift in Sources */,
 				A3E52441201E4862008F81A2 /* Requester.swift in Sources */,
+				A3E52447201E4B12008F81A2 /* Emotion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

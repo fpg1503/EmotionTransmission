@@ -1,7 +1,7 @@
 import UIKit
 
 struct Requester {
-    func classify(image: UIImage, result: @escaping (String, Error) -> Void) {
+    func classify(image: UIImage, completion: @escaping ([[String: Any]], Error?) -> Void) {
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig, delegate: nil, delegateQueue: nil)
         let url = URL(string: "https://westus.api.cognitive.microsoft.com/emotion/v1.0/recognize")!
@@ -17,13 +17,11 @@ struct Requester {
 
         let task = session.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
             if (error == nil) {
-                // Success
-                let statusCode = (response as! HTTPURLResponse).statusCode
-                print("URL Session Task Succeeded: HTTP \(statusCode)")
-            }
-            else {
-                // Failure
-                print("URL Session Task Failed: %@", error!.localizedDescription);
+                let json = try! JSONSerialization.jsonObject(with: data!, options: [])
+
+                completion(json as? [[String: Any]] ?? [], error)
+            } else {
+                completion([], error)
             }
         })
         task.resume()
