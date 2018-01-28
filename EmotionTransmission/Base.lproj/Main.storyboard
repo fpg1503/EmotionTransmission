@@ -21,6 +21,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2cX-cd-tWA">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KpP-FM-mpW">
+                                <rect key="frame" x="0.0" y="500" width="375" height="167"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.6522902397260274" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kW1-Pb-lvf">
                                 <rect key="frame" x="145" y="40" width="85" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
@@ -35,12 +39,6 @@
                                     <action selector="openCameraButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ypA-2h-M2F"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEC-u6-NiV">
-                                <rect key="frame" x="0.0" y="552" width="375" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PP-hm-CeA">
                                 <rect key="frame" x="0.0" y="500" width="375" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
@@ -49,20 +47,30 @@
                                     <action selector="tryAgainWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xyN-EN-Aa3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEC-u6-NiV">
+                                <rect key="frame" x="0.0" y="552" width="375" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2PP-hm-CeA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0PO-ra-VcC"/>
+                            <constraint firstItem="KpP-FM-mpW" firstAttribute="top" secondItem="2PP-hm-CeA" secondAttribute="top" id="0uF-6E-dU8"/>
                             <constraint firstItem="ISX-lb-gKV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1ZQ-8Q-qYB"/>
                             <constraint firstItem="ISX-lb-gKV" firstAttribute="top" secondItem="dEC-u6-NiV" secondAttribute="bottom" id="8PS-tA-QKQ"/>
                             <constraint firstItem="dEC-u6-NiV" firstAttribute="top" secondItem="2PP-hm-CeA" secondAttribute="bottom" id="8bc-Zg-e07"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KpP-FM-mpW" secondAttribute="trailing" id="Bvs-yr-8xd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dEC-u6-NiV" secondAttribute="trailing" id="C7j-RM-LxY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2PP-hm-CeA" secondAttribute="trailing" id="Ejy-Ne-aa1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ISX-lb-gKV" secondAttribute="trailing" id="Jma-DQ-ubM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ISX-lb-gKV" secondAttribute="bottom" constant="20" id="Z3H-8T-nc1"/>
                             <constraint firstItem="kW1-Pb-lvf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bJA-lO-Rb8"/>
                             <constraint firstItem="2cX-cd-tWA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dVL-Lb-d2e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KpP-FM-mpW" secondAttribute="bottom" id="iIc-lx-ZEk"/>
                             <constraint firstItem="2cX-cd-tWA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jdx-L8-5C6"/>
+                            <constraint firstItem="KpP-FM-mpW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="n7Z-TL-ogf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2cX-cd-tWA" secondAttribute="trailing" id="qQH-6q-6Jc"/>
                             <constraint firstItem="kW1-Pb-lvf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="ukF-Pc-adj"/>
                             <constraint firstItem="dEC-u6-NiV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="upJ-HO-F1T"/>
@@ -78,6 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>
